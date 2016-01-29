@@ -33,7 +33,7 @@ Pizza.prototype.fullname = function() {
 
 
 Pizza.prototype.fullprice = function() {
-  return fullprice = this.sizeprice() + this.toppingprice();
+  return this.sizeprice() + this.toppingprice();
 }
 // front end logic
 
@@ -49,7 +49,7 @@ $("form#pizza").submit(function(event) {
   // var fullprice = this.sizeprice + this.toppingprice;
 
   $(".showpizza").text(newPizza.fullname());
-  // $(".showprice").text(newPizza.fullPrice());
+  $(".showprice").text(newPizza.fullprice());
 
   });
 });

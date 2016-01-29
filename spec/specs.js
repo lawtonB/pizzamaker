@@ -25,7 +25,7 @@ describe('fullprice', function() {
 describe("fullname", function() {
   it("returns full name of pizza", function(){
   var testPizza = new Pizza("large", "portobello");
-  expect(testPizza.fullname()).to.equal("large portobello pizza")
+  expect(testPizza.fullname()).to.equal("large portobello pizza");
   });
 });
 //
