@@ -1,9 +1,10 @@
-
-function Ticket(age, time, movieName){
-  this.age = age;
-  this.time = time;
-  this.movieName = movieName;
+function Pizza (ordersize, topping) {
+  this.ordersize = ordersize;
+  this.topping = topping;
 }
+
+var myPizza = new Pizza("large", "pepperoni");
+var myPizza1 = new Pizza("small", "cheese");
 
 Ticket.prototype.price = function() {
   var cost = 12
