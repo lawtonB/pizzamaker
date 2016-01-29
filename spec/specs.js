@@ -15,24 +15,30 @@ describe('sizeprice', function() {
   });
 });
 
-describe('toppingprice', function() {
-  it("returns pizza cost based on topping", function() {
-    var testPizza = new Pizza("small", "portobello");
-    expect(testPizza.sizeprice()).to.equal(6);
+describe('fullprice', function() {
+  it("returns full pizza price", function() {
+    var testPizza = new Pizza("large", "portobello");
+    expect(testPizza.fullprice()).to.equal(13);
   });
 });
+
+describe("fullname", function() {
+  it("returns full name of pizza", function(){
+  var testPizza = new Pizza("large", "portobello");
+  expect(testPizza.fullname()).to.equal("large portobello pizza")
+  });
+});
+//
+// describe("fullprice", function() {
+//   it("returns complete value of pizza", function(){
+//     var testPizza = new Pizza("large", "portobello");
+//     expect(testPizza.fullprice()).to.equal(13);
+//   });
+// });
 
 // describe('toppingprice', function() {
 //   it("calculates pizza cost based on topping", function() {
 //     var testPizza1 = new Pizza("small");
 //     expect(testPizza1.sizeprice).to.equal(6);
-//   });
-// });
-
-//
-// describe('Ticket', function() {
-//   it("generates price from ticket object", function() {
-//   var testTicket = new Ticket(13, "12.00", "Wizard of Oz Anniversary Show")
-//     expect(testTicket.price()).to.equal(14);
 //   });
 // });
