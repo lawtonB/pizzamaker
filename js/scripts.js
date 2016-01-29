@@ -3,46 +3,47 @@ function Pizza (ordersize, topping) {
   this.topping = topping;
 }
 
-var myPizza = new Pizza("large", "pepperoni");
-var myPizza1 = new Pizza("small", "cheese");
-
-Ticket.prototype.price = function() {
-  var cost = 12
-    if (this.age >= 13 && this.age <= 55){
-      var cost = cost;
-      console.log("hey, i'm 13!")
-    }else {
-      var cost = cost - 2;
+Pizza.prototype.sizeprice = function() {
+    var ordersize = 0;
+    if (this.ordersize === "small"){
+      return 6;
+    } else if (this.ordersize === "medium") {
+      return 8;
+    } else if (this.ordersize === "large"){
+      return 10;
+    } else
+      return 0;
     }
 
-    if (this.time === "12.00" ) {
-      var cost = cost - 2;
-      console.log("hey, i'm 12:00!")
-    }else {
-      var cost = cost;
-    }
-
-    if (this.movieName = "Wizard of Oz Anniversary Show") {
-      var cost = cost + 4;
-      console.log("hey, i'm OZ!")
-    }else {
-      var cost = cost;
-
-    }
-    return cost;
+Pizza.prototype.toppingprice = function() {
+  if (this.ordersize === "cheese"){
+    return this.ordersize
+  } else if (this.ordersize === "pepperoni"){
+    return this.ordersize + 2;
+  } else if (this.ordersize === "portobello"){
+    return this.ordersize + 3;
+  }
 }
 
 
+    // if (this.topping === "pepperoni"){
+    //   var cost = cost + 2
+    // } else if (this.topping === "cheese") {
+    //   var cost = cost
+    // }
+    // return cost;
+  // }
+
 $(document).ready(function() {
+$("form#pizza").submit(function(event) {
+  event.preventDefault();
 
-$("form#movie").submit(function(event) {
-  var inputMovie = $("select#movie_choices").val();
-  var inputTime = $("select#time_choices").val();
-  var inputAge = $("input#age").val();
-  var newTicket = new Ticket(inputAge, inputTime, inputMovie);
+  var inputSize = $("select#size_choice").val();
+  var inputTopping = $("select#topping_choice").val();
+  var newPizza = new Pizza (ordersize, topping);
 
-  $(".price").append("$" + newTicket.price())  ;
+  $(".price").append("$" + newPizza.price())  ;
 
- event.preventDefault();
+
   });
 });

@@ -16,39 +16,30 @@
     <h1>Luigis pizza</h1>
     </div>
 
-    <form id ="movie">
-      <p> <label for="movie_choices">which movie do you want to see?</label>
-      <select id="movie_choices" class="btn btn-lg">
-        <option value = "chinatown">Chinatown</option>
-        <option value = "Wizard of Oz">Wizard of Oz Anniversary Show</option>
+    <form id ="pizza">
+      <div>
+      <p> <label for="size_choice">please pick a size</label>
+      <select id="size_choice" class="btn btn-lg">
+        <option value = "small">small</option>
+        <option value = "medium">medium</option>
+        <option value = "large">large</option>
       </select></p>
+      </div>
 
-      <p> <label for="time_choices">what time do you want to see the movie?</label>
-      <select id="time_choices" class="btn btn-lg">
-        <option value = "12.00">12.00</option>
-        <option value = "3.00">3.00</option>
-      </select></p>
       <p>
-      Enter your Age<input id="age" type="number" name="quantity" min="1" max="100">
-    </p>
-    <p>
-      <input type="submit" value="Get ticket prices">
-    </p>
+      <label for="topping_choice">Please pick a topping</label>
+      <select id="topping_choice" class="btn btn-lg">
+        <option value = "cheese">cheese</option>
+        <option value = "pepperoni">pepperoni</option>
+        <option value = "portobello">portobello mushroom</option>
+      </select>
+      </p>
 
+    <p>
+      <input type="submit" value="Get Pizza price">
+    </p>
       </form>
 
-      <div class = "price">
-      </div>
-    <!-- <div class="container"
-
-      <div class="movieSelections">
-        <h3>Chinatown</h3>
-        <h3>Wizard of Oz</h3>
-      </div> -->
-
-
-
-
-    </div>
+      <div class="price"></div>
   </body>
 </html>

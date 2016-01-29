@@ -7,11 +7,28 @@ describe('pizza', function() {
   });
 });
 
-// describe('user', function() {
-//   it("takes users age", function() {
-//     expect(user(12)).to.equal("pgOnly");
+describe('sizeprice', function() {
+  it("returns pizza cost based on size", function() {
+    var testPizza = new Pizza("small", "cheese");
+    expect(testPizza.sizeprice()).to.equal(6);
+    // expect(testPizza.sizeprice()).to.equal(15);
+  });
+});
+
+describe('toppingprice', function() {
+  it("returns pizza cost based on topping", function() {
+    var testPizza = new Pizza("small", "portobello");
+    expect(testPizza.sizeprice()).to.equal(6);
+  });
+});
+
+// describe('toppingprice', function() {
+//   it("calculates pizza cost based on topping", function() {
+//     var testPizza1 = new Pizza("small");
+//     expect(testPizza1.sizeprice).to.equal(6);
 //   });
 // });
+
 //
 // describe('Ticket', function() {
 //   it("generates price from ticket object", function() {
