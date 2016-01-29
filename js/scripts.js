@@ -1,6 +1,9 @@
+// business logic
+
 function Pizza (ordersize, topping) {
   this.ordersize = ordersize;
   this.topping = topping;
+  this.fullprice = null;
 }
 
 Pizza.prototype.sizeprice = function() {
@@ -29,28 +32,22 @@ Pizza.prototype.fullprice = function() {
 }
 
 Pizza.prototype.fullname = function() {
-  return this.ordersize + " " + this.topping + " " + "pizza";
+  return this.ordersize + " " + this.topping + " " + "pizza" ;
 }
 
+// front end logic
 
-
-    // if (this.topping === "pepperoni"){
-    //   var cost = cost + 2
-    // } else if (this.topping === "cheese") {
-    //   var cost = cost
-    // }
-    // return cost;
-  // }
-$(function() {
-
+$(document).ready(function() {
 $("form#pizza").submit(function(event) {
   event.preventDefault();
 
   var inputSize = $(this).find("select#size_choice").val();
   var inputTopping = $(this).find("select#topping_choice").val();
-  var newPizza = new Pizza (ordersize, topping);
+  var newPizza = new Pizza (inputSize, inputTopping);
+  // var newprice = new pizza (this.fullprice);
 
-  $(".price").append("$" + newPizza.price())  ;
+  $(".showpizza").text(newPizza.fullname());
+  $(".showprice").text(this.fullprice());
 
   });
 });
