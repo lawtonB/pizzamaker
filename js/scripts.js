@@ -3,7 +3,7 @@
 function Pizza (ordersize, topping) {
   this.ordersize = ordersize;
   this.topping = topping;
-  this.fullprice = null;
+  // this.pizzaPrice = null;
 }
 
 Pizza.prototype.sizeprice = function() {
@@ -14,7 +14,7 @@ Pizza.prototype.sizeprice = function() {
     } else if (this.ordersize === "large"){
       return 10;
     } else
-      return 0;
+      return 1;
     }
 
 Pizza.prototype.toppingprice = function() {
@@ -27,27 +27,29 @@ Pizza.prototype.toppingprice = function() {
   }
 }
 
-Pizza.prototype.fullprice = function() {
-  return this.fullprice = this.sizeprice() + this.toppingprice();
-}
-
 Pizza.prototype.fullname = function() {
   return this.ordersize + " " + this.topping + " " + "pizza" ;
 }
 
+
+Pizza.prototype.fullprice = function() {
+  return fullprice = this.sizeprice() + this.toppingprice();
+}
 // front end logic
 
 $(document).ready(function() {
 $("form#pizza").submit(function(event) {
   event.preventDefault();
-
+  debugger;
   var inputSize = $(this).find("select#size_choice").val();
   var inputTopping = $(this).find("select#topping_choice").val();
   var newPizza = new Pizza (inputSize, inputTopping);
   // var newprice = new pizza (this.fullprice);
+  // var total = newPizza.fullPrice;
+  // var fullprice = this.sizeprice + this.toppingprice;
 
   $(".showpizza").text(newPizza.fullname());
-  $(".showprice").text(this.fullprice());
+  // $(".showprice").text(newPizza.fullPrice());
 
   });
 });
