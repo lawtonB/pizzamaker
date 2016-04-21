@@ -2,11 +2,9 @@
 
 web application demonstrating objects and prototype methods, jan 29 2016
 
-By lawtonB
+## Description
 
-Description
-
-website withmath functions to demonstrate objects, variables, and prototypes
+website with math functions to demonstrate objects, variables, and prototypes
 
 ##Setup/Installation Requirements
 
