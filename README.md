@@ -1,37 +1,30 @@
-# _{Pizza Site}_
+##Pizza Machine
 
-#### _{web application demonstrating objects and prototype methods}, {jan 29 2016}_
+web application demonstrating objects and prototype methods, jan 29 2016
 
-#### By _**{lawtonB}**_
+By lawtonB
 
-## Description
+Description
 
-_{small website with pizza ordering function to demonstrate objects variables and prototypes }_
+website withmath functions to demonstrate objects, variables, and prototypes
 
-## Setup/Installation Requirements
+##Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+web browser required
 
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
+##Known Bugs
 
-## Known Bugs
+global error issue currently detected in BDD does not affect website however
 
-_{global error issue currently detected in BDD }_
+##Support and contact details
 
-## Support and contact details
+lawton.a.browning@gmail.com
 
-_{lawton.a.browning@gmail.com}_
+##Technologies Used
 
-## Technologies Used
+HTML CSS, JAVASCRIPT, MOCHA CHAI
 
-_{HTML CSS, JAVASCRIPT, MOCHA CHAI}_
+License
 
-### License
 
-*{Determine the license under which this application can be used.  See below for more details on licensing.}*
-
-Copyright (c) 2015 **_{lawtonB}_**
+Copyright (c) 2015 lawtonB
